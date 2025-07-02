@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: quran-video-api
+    env: node
+    plan: free
+    region: singapore
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    buildpacks:
+      - url: https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
